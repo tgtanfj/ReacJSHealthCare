@@ -23,8 +23,14 @@
             margin: 0 20px;
 
             &:hover {
-                background-color: darken($colormain, 5);
+                cursor: pointer;
             }
+        }
+
+        .welcome {
+            margin-right: 25px;
+            font-size: 14px;
+            font-weight: 400;
         }
 
         .languages {

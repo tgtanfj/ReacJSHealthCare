@@ -11,6 +11,7 @@ const getAllUsers = (inputId) => {
 }
 
 const createNewUserService = (data) => {
+    console.log('check data from service: ', data)
     return axios.post('/api/create-new-user', data)
 }
 
@@ -26,4 +27,8 @@ const editUserService = (inputData) => {
     return axios.put('/api/edit-user', inputData)
 }
 
-export { handldLoginApi, getAllUsers, createNewUserService, deleteUserService, editUserService }
+const getAllCodeService = (inputType) => {
+    return axios.get(`/api/getallcode?type=${inputType}`)
+}
+
+export { handldLoginApi, getAllUsers, createNewUserService, deleteUserService, editUserService, getAllCodeService }
