@@ -31,14 +31,14 @@ class OutStandingDoctor extends Component {
         // console.log('healthcare check prop topdoctor: ', this.props.topDoctorsRedux)
         let allDoctors = this.state.arrDoctors
         let { language } = this.props
-        allDoctors = allDoctors.concat(allDoctors).concat(allDoctors).concat(allDoctors).concat(allDoctors)
+        // allDoctors = allDoctors.concat(allDoctors).concat(allDoctors).concat(allDoctors).concat(allDoctors)
         return (
             <div>
                 <div className='section-share section-outstanding-doctor'>
                     <div className='section-container'>
                         <div className='section-header'>
-                            <span className='title-section'>Bác sĩ nổi bậc tuần qua</span>
-                            <button className='btn-section'>XEM THÊM</button>
+                            <span className='title-section'><FormattedMessage id='homepage.outstanding-doctor'/></span>
+                            <button className='btn-section'><FormattedMessage id='homepage.learn-more'/></button>
                         </div>
                         <div className='section-body'>
                             <Slider {...this.props.settings}>
