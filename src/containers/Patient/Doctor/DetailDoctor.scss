@@ -1,0 +1,36 @@
+.doctor-detail-container {
+    height: 500px;
+    border: 1px solid red;
+    margin: 0 100px;
+
+    .intro-doctor {
+        display: flex;
+
+        .content-left {
+            width: 20%;
+            background: center center no-repeat;
+            height: 120px;
+            width: 120px;
+            border-radius: 50%;
+            margin: 10px 20px;
+        }
+
+        .content-right {
+            padding-left: 10px;
+            width: 80%;
+            border: 1px solid green;
+            display: flex;
+            flex-direction: column;
+
+            .up {
+                font-size: 20x;
+                font-weight: 600;
+                padding-top: 15px;
+            }
+
+            .down {
+                padding-top: 10px;
+            }
+        }
+    }
+}

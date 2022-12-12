@@ -71,50 +71,53 @@ class HomeHeader extends Component {
                                 <FormattedMessage id='homeheader.support' />
                             </div>
                             <div className='flag'>
-                                <div className={language === LANGUAGES.VI ? 'language-vi active' :  'language-vi'}><span onClick={() => this.changeLanguage(LANGUAGES.VI)}>VN</span></div>
-                                <div className={language === LANGUAGES.EN ? 'language-en active' :  'language-en'}><span onClick={() => this.changeLanguage(LANGUAGES.EN)}>EN</span></div>
+                                <div className={language === LANGUAGES.VI ? 'language-vi active' : 'language-vi'}><span onClick={() => this.changeLanguage(LANGUAGES.VI)}>VN</span></div>
+                                <div className={language === LANGUAGES.EN ? 'language-en active' : 'language-en'}><span onClick={() => this.changeLanguage(LANGUAGES.EN)}>EN</span></div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className='home-header-banner'>
-                    <div className='content-up'>
-                        <div className='title-1'><FormattedMessage id='banner.title1' /></div>
-                        <div className='title-2'><FormattedMessage id='banner.title2' /></div>
-                        <div className='search'>
-                            <i className='fas fa-search'></i>
-                            <input placeholder='Tìm kiếm...' type='text' />
-                        </div>
-                    </div>
-                    <div className='content-down'>
-                        <div className='options'>
-                            <div className='option-child'>
-                                <div className='icon-child'><img src={khamchuyenkhoa} /></div>
-                                <div className='text-child'><b><FormattedMessage id='banner.bannerp1' /></b></div>
-                            </div>
-                            <div className='option-child'>
-                                <div className='icon-child'><img src={khamtuxa} /></div>
-                                <div className='text-child'><b><FormattedMessage id='banner.bannerp2' /></b></div>
-                            </div>
-                            <div className='option-child'>
-                                <div className='icon-child'><img src={khamtongquat} /></div>
-                                <div className='text-child'><b><FormattedMessage id='banner.bannerp3' /></b></div>
-                            </div>
-                            <div className='option-child'>
-                                <div className='icon-child'><img src={dichvuxetnghiem} /></div>
-                                <div className='text-child'><b><FormattedMessage id='banner.bannerp4' /></b></div>
-                            </div>
-                            <div className='option-child'>
-                                <div className='icon-child'><img src={suckhoetinhthan} /></div>
-                                <div className='text-child'><b><FormattedMessage id='banner.bannerp5' /></b></div>
-                            </div>
-                            <div className='option-child'>
-                                <div className='icon-child'><img src={khamnhakhoa} /></div>
-                                <div className='text-child'><b><FormattedMessage id='banner.bannerp6' /></b></div>
+                {this.props.isShowBanner === true &&
+                    <div className='home-header-banner'>
+                        <div className='content-up'>
+                            <div className='title-1'><FormattedMessage id='banner.title1' /></div>
+                            <div className='title-2'><FormattedMessage id='banner.title2' /></div>
+                            <div className='search'>
+                                <i className='fas fa-search'></i>
+                                <input placeholder='Tìm kiếm...' type='text' />
                             </div>
                         </div>
+                        <div className='content-down'>
+                            <div className='options'>
+                                <div className='option-child'>
+                                    <div className='icon-child'><img src={khamchuyenkhoa} /></div>
+                                    <div className='text-child'><b><FormattedMessage id='banner.bannerp1' /></b></div>
+                                </div>
+                                <div className='option-child'>
+                                    <div className='icon-child'><img src={khamtuxa} /></div>
+                                    <div className='text-child'><b><FormattedMessage id='banner.bannerp2' /></b></div>
+                                </div>
+                                <div className='option-child'>
+                                    <div className='icon-child'><img src={khamtongquat} /></div>
+                                    <div className='text-child'><b><FormattedMessage id='banner.bannerp3' /></b></div>
+                                </div>
+                                <div className='option-child'>
+                                    <div className='icon-child'><img src={dichvuxetnghiem} /></div>
+                                    <div className='text-child'><b><FormattedMessage id='banner.bannerp4' /></b></div>
+                                </div>
+                                <div className='option-child'>
+                                    <div className='icon-child'><img src={suckhoetinhthan} /></div>
+                                    <div className='text-child'><b><FormattedMessage id='banner.bannerp5' /></b></div>
+                                </div>
+                                <div className='option-child'>
+                                    <div className='icon-child'><img src={khamnhakhoa} /></div>
+                                    <div className='text-child'><b><FormattedMessage id='banner.bannerp6' /></b></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                }
+
             </React.Fragment>
         );
     }
@@ -125,7 +128,7 @@ const mapStateToProps = state => {
     return {
         isLoggedIn: state.user.isLoggedIn,
         language: state.app.language,
-        
+
     };
 };
 

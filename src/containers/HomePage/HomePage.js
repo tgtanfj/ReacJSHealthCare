@@ -27,21 +27,21 @@ class HomePage extends Component {
             speed: 500,
             slidesToShow: 4,
             slidesToScroll: 2,
-            // slickGoTo: this.handleAfterChange
         }
         return (
             <div>
-                <HomeHeader/>
-                <Specialty 
-                settings = {settings}/>
-                <MedicalFacility 
-                settings = {settings}/>
+                <HomeHeader
+                    isShowBanner={true} />
+                <Specialty
+                    settings={settings} />
+                <MedicalFacility
+                    settings={settings} />
                 <OutStandingDoctor
-                settings = {settings}/>
+                    settings={settings} />
                 <HandBook
-                settings = {settings}/>
-                <About/>
-                <HomeFooter/>
+                    settings={settings} />
+                <About />
+                <HomeFooter />
             </div>
         );
     }
