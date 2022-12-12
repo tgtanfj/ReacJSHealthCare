@@ -12,7 +12,7 @@
         "welcome": "What's up, "
     },
     "banner": {
-        "title1": "MEDICAL BACKGROUND",
+        "title1": "MEDICAL PLATFORM",
         "title2": "COMPREHENSIVE HEALTH CARE",
         "bannerp1": "Specialized examination",
         "bannerp2": "Remote medical examination",
@@ -50,7 +50,10 @@
         "image": "Avatar",
         "save": "Save",
         "edit": "Update user"
-        
+    },
+    "homepage": {
+        "outstanding-doctor": "Outstanding Doctor",
+        "learn-more": "LEARN MORE"
     }
     
 }

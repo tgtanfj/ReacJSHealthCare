@@ -15,14 +15,19 @@ import "slick-carousel/slick/slick-theme.css"
 
 class HomePage extends Component {
 
+    // handleAfterChange = (event, slick, currentSlide) => {
+
+    // }
+
     render() {
 
         let settings = {
             dots: false,
-            infinite: true,
+            infinite: false,
             speed: 500,
             slidesToShow: 4,
             slidesToScroll: 2,
+            // slickGoTo: this.handleAfterChange
         }
         return (
             <div>
