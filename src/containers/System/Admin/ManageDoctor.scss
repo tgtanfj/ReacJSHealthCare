@@ -1,5 +1,5 @@
 .manage-doctor-container {
-    padding: 0 20px;
+    padding: 20px;
 
     .manage-doctor-title {
         text-align: center;
@@ -23,6 +23,23 @@
         &:hover {
             opacity: 0.9;
             cursor: pointer;
+        }
+    }
+
+    .create-content-doctor {
+        outline: none;
+        border-radius: 5px;
+        border: 2px solid #0071ba;
+        background-color: #fff;
+        color: #0071ba;
+        height: 30px;
+        margin-top: 30px;
+
+        &:hover {
+            opacity: 0.9;
+            cursor: pointer;
+            background-color: #0071ba;
+            color: #fff;
         }
     }
 
