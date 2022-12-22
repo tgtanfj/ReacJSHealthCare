@@ -10,6 +10,7 @@ import suckhoetinhthan from '../../assets/images/icons/suckhoetinhthan.png'
 import dichvuxetnghiem from '../../assets/images/icons/dichvuxetnghiem.png'
 import { FormattedMessage } from 'react-intl'
 import { LANGUAGES } from '../../utils'
+import { withRouter } from 'react-router';
 
 import { changeLanguageApp } from '../../store/actions/appActions';
 
@@ -18,6 +19,12 @@ class HomeHeader extends Component {
     changeLanguage = (language) => {
         this.props.changeLanguageAppRedux(language)
         // fire redux event(actions)
+    }
+
+    returnToHomePage = () => {
+        if (this.props.history) {
+            this.props.history.push(`/home`)
+        }
     }
 
     render() {
@@ -29,7 +36,9 @@ class HomeHeader extends Component {
                     <div className='home-header-content'>
                         <div className='left-content'>
                             <i className='fas fa-bars'></i>
-                            <img src={logo1} className='header-logo' alt=''></img>
+                            <img src={logo1} className='header-logo' alt=''
+                                onClick={() => this.returnToHomePage()}
+                            ></img>
                         </div>
                         <div className='center-content'>
                             <div className='child-content'>
@@ -138,4 +147,4 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(HomeHeader);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(HomeHeader));
