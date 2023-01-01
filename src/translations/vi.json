@@ -63,5 +63,48 @@
         "choose-doctor": "Chọn bác sĩ",
         "choose-date": "Chọn ngày",
         "save": "Lưu thông tin"
+    },
+    "patient": {
+        "detail-doctor": {
+            "schedule": "Lịch khám",
+            "no-schedule": "Không có lịch khám cho ngày này, vui lòng chọn ngày khác!",
+            "choose": "Chọn ",
+            "book-free": " và đặt (miễn phí)"
+        },
+        "extra-info-doctor": {
+            "text-address": "Địa chỉ phòng khám",
+            "price": "Giá khám",
+            "detail": "Xem chi tiết",
+            "hide-detail": "Ẩn bảng giá",
+            "payment": "Người bệnh có thể thanh toán chi phí bằng hình thức:"
+        },
+        "booking-modal": {
+            "title": "Thông tin đặt lịch khám bệnh",
+            "name": "Họ và tên",
+            "address": "Địa chỉ liên hệ",
+            "reason": "Lý do khám",
+            "date": "Ngày sinh",
+            "gender": "Giới tính",
+            "btn-close": "Hủy",
+            "btn-save": "Xác nhận",
+            "phone": "Số điện thoại",
+            "price-booking": "Miễn phí đặt lịch",
+            "price":"Giá khám"
+        }
+    },
+    "admin": {
+        "manage-doctor": {
+            "title": "Tạo thêm thông tin bác sĩ",
+            "choose-doctor": "Chọn bác sĩ",
+            "intro": "Thông tin giới thiệu",
+            "create-button": "Tạo thông tin",
+            "save-button": "Lưu thông tin",
+            "price": "Giá khám bệnh",
+            "payment": "Phương thức thanh toán",
+            "province": "Tỉnh thành",
+            "clinic-name": "Tên phòng khám",
+            "clinic-address": "Địa chỉ phòng khám",
+            "clinic-note": "Ghi chú"
+        }
     }
 }
