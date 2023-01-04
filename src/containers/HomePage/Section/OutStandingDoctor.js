@@ -29,7 +29,7 @@ class OutStandingDoctor extends Component {
     }
 
     handleViewDetailDoctor = (doctor) => {
-        if(this.props.history) {
+        if (this.props.history) {
             this.props.history.push(`/detail-doctor/${doctor.id}`)
         }
     }
@@ -44,8 +44,10 @@ class OutStandingDoctor extends Component {
                 <div className='section-share section-outstanding-doctor'>
                     <div className='section-container'>
                         <div className='section-header'>
-                            <span className='title-section'><FormattedMessage id='homepage.outstanding-doctor'/></span>
-                            <button className='btn-section'><FormattedMessage id='homepage.learn-more'/></button>
+                            <span className='title-section'><FormattedMessage id='homepage.outstanding-doctor' /></span>
+                            <button className='btn-section'>
+                                <FormattedMessage id='homepage.learn-more' />
+                            </button>
                         </div>
                         <div className='section-body'>
                             <Slider {...this.props.settings}>

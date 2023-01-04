@@ -61,7 +61,7 @@
                 background-position: center center;
 
                 &.section-specialty {
-                    background-image: url('../../assets/images/specialty/specialty_1.jpg');
+                    // background-image: url('../../assets/images/specialty/specialty_1.jpg');
                 }
 
                 &.section-medical-facility {
@@ -114,21 +114,66 @@
                 font-weight: 600;
             }
 
-            .btn-section {
-                margin-right: 6px;
-                border: none;
-                border-radius: 5px;
+            button {
+                position: relative;
+                background: transparent;
+                color: #abde5f;
+                border: 2px solid #abde5f;
+                padding: 8px 16px;
                 height: 30px;
-                background-color: rgb(239, 236, 236);
-                transition: 0.2 ease;
-                font-size: 12px;
-                cursor: pointer;
+                text-align: center;
+                width: auto;
+                line-height: 14px;
+              }
+            
+              button::before,
+              button::after {
+                content: '';
+                display: block;
+                position: absolute;
+                width: 10%;
+                background: #fff;
+                height: 4px;
+                transition: all 0.45s cubic-bezier(0.86, 0, 0.07, 1);
+              }
+            
+              button::before {
+                right: 20%;
+                top: -3px;
+                transform: skewX(-45deg);
+              }
+            
+              button::after {
+                left: 20%;
+                bottom: -3px;
+                transform: skewX(45deg);
+              }
+            
+              button:hover::before {
+                right: 80%;
+              }
+            
+              button:hover::after {
+                left: 80%;
+              }
 
-                &:hover {
-                    background-color: #abde5f;
-                    color: #fff;
-                }
-            }
+            
+            // .btn-section {
+            //     margin-right: 6px;
+            //     border: none;
+            //     border-radius: 5px;
+            //     height: 30px;
+            //     background-color: rgb(239, 236, 236);
+            //     transition: 0.2 ease;
+            //     font-size: 12px;
+            //     cursor: pointer;
+
+            //     &:hover {
+            //         background-color: #abde5f;
+            //         color: #fff;
+            //     }
+            // }
+
         }
 
 
