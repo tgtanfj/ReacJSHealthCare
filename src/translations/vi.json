@@ -91,6 +91,9 @@
             "phone": "Số điện thoại",
             "price-booking": "Miễn phí đặt lịch",
             "price":"Giá khám"
+        },
+        "specialty-modal": {
+            "learn-more": "Xem thêm"
         }
     },
     "admin": {

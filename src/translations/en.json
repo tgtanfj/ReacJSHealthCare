@@ -91,6 +91,9 @@
             "phone": "Phone number",
             "price-booking": "Free booking",
             "price":"Examination price"
+        },
+        "specialty-modal": {
+            "learn-more": "Learn more"
         }
     },
     "admin": {

@@ -8,6 +8,7 @@ import moment from 'moment';
 import { LANGUAGES } from '../../../utils';
 import NumberFormat from 'react-number-format';
 import _ from 'lodash';
+import { Link } from 'react-router-dom';
 
 class ProfileDoctor extends Component {
 
@@ -52,14 +53,14 @@ class ProfileDoctor extends Component {
         if (dataScheduleTimeModal && !_.isEmpty(dataScheduleTimeModal)) {
             let time = language === LANGUAGES.VI ? dataScheduleTimeModal.timeTypeData.valueVi : dataScheduleTimeModal.timeTypeData.valueEn
 
-            let date = language === LANGUAGES.VI ? 
-            moment.unix(+dataScheduleTimeModal.date / 1000).format('dddd - DD/MM/YYYY')
-            : 
-            moment.unix(+dataScheduleTimeModal.date / 1000).locale('en').format('ddd - MM/DD/YYYY')
+            let date = language === LANGUAGES.VI ?
+                moment.unix(+dataScheduleTimeModal.date / 1000).format('dddd - DD/MM/YYYY')
+                :
+                moment.unix(+dataScheduleTimeModal.date / 1000).locale('en').format('ddd - MM/DD/YYYY')
             return (
                 <>
                     <div>{time} - {date}</div>
-                    <div><FormattedMessage id='patient.booking-modal.price-booking'/></div>
+                    <div><FormattedMessage id='patient.booking-modal.price-booking' /></div>
                 </>
             )
         }
@@ -68,7 +69,9 @@ class ProfileDoctor extends Component {
 
     render() {
         let { dataProfile } = this.state
-        let { language, isShowDescriptionDoctor, dataScheduleTimeModal } = this.props
+        let { language, isShowDescriptionDoctor, dataScheduleTimeModal,
+            isShowLinkDetail, isShowPrice, doctorId
+        } = this.props
         let nameVi = '', nameEn = ''
         if (dataProfile && dataProfile.positionData) {
             nameVi = `${dataProfile.positionData.valueVi}, ${dataProfile.firstName} ${dataProfile.lastName}`
@@ -103,27 +106,32 @@ class ProfileDoctor extends Component {
                         </div>
                     </div>
                 </div>
-                <div className='price'>
-                    <span><FormattedMessage id='patient.booking-modal.price'/>: </span>
-                    {dataProfile && dataProfile.Doctor_Info && language === LANGUAGES.VI
-                        &&
-                        <NumberFormat
-                            value={dataProfile.Doctor_Info.priceTypeData.valueVi}
-                            displayType={'text'}
-                            thousandSeparator={true}
-                            suffix={'VND'}
-                        />
-                    }
-                    {dataProfile && dataProfile.Doctor_Info && language === LANGUAGES.EN &&
+                {isShowLinkDetail === true && <div className='view-detail-doctor'>
+                    <Link to={`/detail-doctor/${doctorId}`}><span><FormattedMessage id='patient.specialty-modal.learn-more' /></span></Link>
+                </div>}
+                {isShowPrice === true &&
+                    <div className='price'>
+                        <span><FormattedMessage id='patient.booking-modal.price' />: </span>
+                        {dataProfile && dataProfile.Doctor_Info && language === LANGUAGES.VI
+                            &&
+                            <NumberFormat
+                                value={dataProfile.Doctor_Info.priceTypeData.valueVi}
+                                displayType={'text'}
+                                thousandSeparator={true}
+                                suffix={'VND'}
+                            />
+                        }
+                        {dataProfile && dataProfile.Doctor_Info && language === LANGUAGES.EN &&
 
-                        <NumberFormat
-                            value={dataProfile.Doctor_Info.priceTypeData.valueEn}
-                            displayType={'text'}
-                            thousandSeparator={true}
-                            suffix={'$'}
-                        />
-                    }
-                </div>
+                            <NumberFormat
+                                value={dataProfile.Doctor_Info.priceTypeData.valueEn}
+                                displayType={'text'}
+                                thousandSeparator={true}
+                                suffix={'$'}
+                            />
+                        }
+                    </div>
+                }
             </div>
 
         )
