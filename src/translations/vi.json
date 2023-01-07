@@ -36,7 +36,8 @@
             "manage-handbook": "Quản lý cẩm nang"
         },
         "doctor": {
-            "manage-schedule": "Quản lý kế hoạch khám bệnh"
+            "manage-schedule": "Quản lý kế hoạch khám bệnh",
+            "manage-patient": "Quản lý bệnh nhân khám bệnh"
         }
     },
     "manage-user": {
@@ -94,6 +95,10 @@
         },
         "specialty-modal": {
             "learn-more": "Xem thêm"
+        },
+        "verify-email": {
+            "verify-email-success": "Xác nhận lịch hẹn thành công",
+            "verify-email-failed": "Lịch hẹn không tồn tại hoặc đã được xác nhận"
         }
     },
     "admin": {

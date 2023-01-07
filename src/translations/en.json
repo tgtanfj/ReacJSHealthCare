@@ -36,7 +36,8 @@
             "manage-handbook": "Manage handbook"
         },
         "doctor": {
-            "manage-schedule": "Manage Doctor's schedule"
+            "manage-schedule": "Manage Doctor's schedule",
+            "manage-patient": "Manage Doctor's patient"
         }
     },
     "manage-user": {
@@ -94,6 +95,10 @@
         },
         "specialty-modal": {
             "learn-more": "Learn more"
+        },
+        "verify-email": {
+            "verify-email-success": "Successful appointment confirmation",
+            "verify-email-failed": "The appointment does not exist or has been confirmed"
         }
     },
     "admin": {
