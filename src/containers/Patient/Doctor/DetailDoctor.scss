@@ -30,6 +30,10 @@
 
             .down {
                 padding-top: 10px;
+
+                .like-share-plugin {
+                    margin: 10px 0 20px 0;
+                }
             }
         }
     }
@@ -43,6 +47,12 @@
         margin-bottom: 20px;
         padding: 20px 120px;
         border: 1px solid #ccc;
+
+        h1,
+        h2,
+        h3 {
+            font-size: 17px;
+        }
 
         h5 {
             color: #333;
@@ -71,5 +81,9 @@
         .content-right {
             width: 50%;
         }
+    }
+
+    .comment-doctor {
+        padding: 10px 100px;
     }
 }

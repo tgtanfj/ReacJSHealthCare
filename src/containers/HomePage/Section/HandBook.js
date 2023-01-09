@@ -39,19 +39,19 @@ class HandBook extends Component {
                         <Slider {...this.props.settings}>
                             <div className='section-customize'>
                                 <div className='bg-image section-handbook' />
-                                <div>Cơ xương khớp 1</div>
+                                <div>Phòng chóng bệnh tiểu đường</div>
                             </div>
                             <div className='section-customize'>
                                 <div className='bg-image section-handbook' />
-                                <div>Cơ xương khớp 2</div>
+                                <div>Sức khỏa tim mạch</div>
                             </div>
                             <div className='section-customize'>
                                 <div className='bg-image section-handbook' />
-                                <div>Cơ xương khớp 3</div>
+                                <div>Khám tổng quát ở đâu?</div>
                             </div>
                             <div className='section-customize'>
                                 <div className='bg-image section-handbook' />
-                                <div>Cơ xương khớp 4</div>
+                                <div>Phát đồ điều trị đau cột sống</div>
                             </div>
                             <div className='section-customize'>
                                 <div className='bg-image section-handbook' />
