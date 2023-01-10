@@ -7,6 +7,9 @@ import { getDetailInfoDoctor } from '../../../services/userService'
 import { LANGUAGES } from '../../../utils';
 import DoctorSchedule from './DoctorSchedule';
 import DoctorExtraInfo from './DoctorExtraInfo';
+import LikeAndShare from '../SocialPlugin/LikeAndShare';
+import Comment from '../SocialPlugin/Comment'
+require('dotenv').config()
 
 class DetailDoctor extends Component {
 
@@ -42,10 +45,13 @@ class DetailDoctor extends Component {
         let { language } = this.props
         let { detailDoctor } = this.state
         let nameVi = '', nameEn = ''
+
         if (detailDoctor && detailDoctor.positionData) {
             nameVi = `${detailDoctor.positionData.valueVi}, ${detailDoctor.firstName} ${detailDoctor.lastName}`
             nameEn = `${detailDoctor.positionData.valueEn}, ${detailDoctor.lastName} ${detailDoctor.firstName}`
         }
+
+        let currentURL = +process.env.REACT_APP_IS_LOCALHOST === 1 ? "https://eric-restaurant-bot-tv.herokuapp.com/" : window.location.href
 
         return (
             <>
@@ -65,7 +71,13 @@ class DetailDoctor extends Component {
                                 {detailDoctor && detailDoctor.Markdown && detailDoctor.Markdown.description &&
                                     <span>
                                         {detailDoctor.Markdown.description}
-                                    </span>}
+                                    </span>
+                                }
+                                <div className='like-share-plugin'>
+                                    <LikeAndShare
+                                        dataHref={currentURL}
+                                    />
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -89,7 +101,10 @@ class DetailDoctor extends Component {
                         }
                     </div>
                     <div className='comment-doctor'>
-
+                        <Comment
+                            dataHref={currentURL}
+                            width={"100%"}
+                        />
                     </div>
                 </div>
             </>
