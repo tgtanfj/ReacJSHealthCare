@@ -106,8 +106,6 @@ class ManageSchedule extends Component {
             return
         }
 
-        // let formatedDate = moment(currentDate).format(dateFormat.SEND_TO_SERVER);
-        // let formatedDate = moment(currentDate).unix()
         let formatedDate = new Date(currentDate).getTime()
 
         if (rangeTime && rangeTime.length > 0) {
@@ -137,8 +135,6 @@ class ManageSchedule extends Component {
             toast.error("Schedule saved Failed!")
             console.log('error saveBulkScheduleDoctor: ', res)
         }
-
-        
 
         console.log('check result: ', result)
     }

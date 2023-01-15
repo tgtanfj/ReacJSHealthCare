@@ -19,7 +19,14 @@ class ManageClinic extends Component {
             imageBase64: '',
             descriptionHTML: '',
             descriptionMarkdown: '',
-            address: ''
+            address: '',
+
+            listClinic: '',
+
+            selectedClinic: '',
+
+            nameClinic: ''
+            
         }
     }
 

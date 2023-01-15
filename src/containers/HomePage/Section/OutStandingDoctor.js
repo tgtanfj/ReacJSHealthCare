@@ -35,10 +35,8 @@ class OutStandingDoctor extends Component {
     }
 
     render() {
-        // console.log('healthcare check prop topdoctor: ', this.props.topDoctorsRedux)
         let allDoctors = this.state.arrDoctors
         let { language } = this.props
-        // allDoctors = allDoctors.concat(allDoctors).concat(allDoctors).concat(allDoctors).concat(allDoctors)
         return (
             <div>
                 <div className='section-share section-outstanding-doctor'>
